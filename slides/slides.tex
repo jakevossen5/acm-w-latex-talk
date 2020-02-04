@@ -1,3 +1,7 @@
+% Wishlist of things to cover
+% Wikipedia as source for equations
+
+
 \documentclass{beamer}
 %
 % Choose how your presentation looks.
@@ -42,13 +46,75 @@
 %  \tableofcontents
 %\end{frame}
 
+\section{What is \LaTeX?}
+
+\begin{frame}[fragile]
+  \frametitle{What is \LaTeX}
+
+  It is \textbf{not} a ``what you see is what you get'' editor (WYSIWYG)
+
+  %% text
+\begin{verbatim}
+  \begin{equation}
+        x = \frac{ - b \pm \sqrt{b^2 - 4 a c}}{2a}
+  \end{equation}
+\end{verbatim}
+\par
+  \hrulefill\par
+%% \hline
+  \begin{equation}
+        x = \frac{ - b \pm \sqrt{b^2 - 4 a c}}{2a}
+  \end{equation}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{More LaTeX}
+\begin{verbatim}
+\begin{equation}
+  \int_0^a x^n dx = \frac{1}{n+1}\
+  , a^{n+1} \qquad n \geq 0
+\end{equation}
+\end{verbatim}
+
+\begin{equation}
+  \int_0^a x^n dx = \frac{1}{n+1}\
+  , a^{n+1} \qquad n \geq 0
+\end{equation}
+
+\end{frame}
+
 \section{The Why}
 
-\begin{frame}{First Slide}
+
+\begin{frame}{Widespread use in Academia}
+
+  \begin{enumerate}
+    \item {Almost all journals, especially in Math, CS, and Physics
+      either prefer or mandate \LaTeX as the document submission
+      format}
+   \end{enumerate}
+
+\vskip 1cm
+
+\end{frame}
+
+\begin{frame}{Formatting of Equations}
 
 
 \vskip 1cm
 
 \end{frame}
+
+\begin{frame}{Faster Equation Creation (maybe after some initial costs)}
+
+
+\end{frame}
+
+\begin{frame}{Tooling}
+
+  % Git, text editors, etc
+\end{frame}
+
 
 \end{document}
