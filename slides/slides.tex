@@ -1,5 +1,6 @@
-% Wishlist of things to cover
+% TODO Wishlist of things to cover
 % Wikipedia as source for equations
+% Things that suck in latex
 
 
 \documentclass{beamer}
@@ -24,6 +25,7 @@
 
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 
 \title{An Introduction to \LaTeX}
 \author{Jake Vossen}
@@ -51,7 +53,7 @@
 \begin{frame}[fragile]
   \frametitle{What is \LaTeX}
 
-  It is \textbf{not} a ``what you see is what you get'' editor (WYSIWYG)
+  It is \textbf{not} a ``what you see is what you get'' editor (WYSIWYG). \LaTeX converts plain text files (.tex) into (typically) PDFs
 
   %% text
 \begin{verbatim}
@@ -88,27 +90,18 @@
 \section{The Why}
 
 
-\begin{frame}{Widespread use in Academia}
+\begin{frame}[fragile]
+  \frametitle{Widespread use in Academia}
 
   \begin{enumerate}
     \item {Almost all journals, especially in Math, CS, and Physics
       either prefer or mandate \LaTeX as the document submission
       format}
+    \item {Discrete Math (CSCI 358) uses \LaTeX for all of your homework}
+    \item {It can make your project / homework submissions look much more professional}
    \end{enumerate}
 
 \vskip 1cm
-
-\end{frame}
-
-\begin{frame}{Formatting of Equations}
-
-
-\vskip 1cm
-
-\end{frame}
-
-\begin{frame}{Faster Equation Creation (maybe after some initial costs)}
-
 
 \end{frame}
 
@@ -132,8 +125,125 @@
 
 \end{frame}
 
+\begin{frame}{Quality of Life}
+  \begin{itemize}
+    \item {Use your favorite text editor to write those long papers}
+    \item {Use git to version control and collaborate on writeups}
+    \item {More control over how your document is formatted without having drag everything to how you like it}
+    \item {A better ``default'' look instead of just bolding headings}
+  \end{itemize}
+\end{frame}
 
-\begin{frame}{Tooling}
+\begin{frame}[fragile]
+
+  \frametitle{``Hello World'' document}
+  \begingroup
+  \fontsize{8pt}{10pt}\selectfont
+  \begin{verbatim}
+    \documentclass{article}
+    \usepackage[margin=1in]{geometry}
+    \begin{document}
+    
+    \title{Title Here}
+    \author{Jacob Vossen}
+    \maketitle
+    \begin{abstract}
+    The abstract text goes here.
+    \end{abstract}
+    \section{Introduction}
+    Here is the text of your introduction.
+    \subsection{Subsection Heading Here}
+    Write your subsection text here.
+    \section{Conclusion}
+    Write your conclusion here.
+    
+    \end{document}
+  \end{verbatim}
+\endgroup
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}
+    \item This slide exists to remind Jake to show you the example Hello World document
+  \end{itemize}
+\end{frame}
+  
+
+\section{Parts of a \LaTeX document}
+
+\begin{frame}[fragile]
+  \frametitle{The Header}
+  \begin{verbatim}
+  \documentclass{article}
+  \usepackage[margin=1in]{geometry}
+  \begin{document}
+  \end{verbatim}
+
+  \begin{itemize}
+    \item{Document class - typically \texttt{article}, but you would change this if you where working on a book or thesis (or slides like these)}
+    \item {Packages - easiest way to extend \LaTeX to include more functionality (in this case, setting margins away from the default 2 inches)}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{The Title}
+  \begin{verbatim}
+   \title{Title Here}
+   \author{Jacob Vossen}
+   \maketitle
+  \end{verbatim}
+
+  \begin{itemize}
+    \item {Title is automatically created and formatted with \texttt{\\maketitle}}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{The Body}
+
+  \begin{verbatim}
+    \section{Introduction}
+    Here is the text of your introduction.
+    \subsection{Subsection Heading Here}
+    Write your subsection text here.
+
+  \end{verbatim}
+% TODO Add verbatim to the subsection texts
+  This is the meat of writing \LaTeX documents, using section, subsection, and subsubsection etc to structure your document, adding in equations when you need them. 
+
+
+\end{frame}
+
+\begin{frame}{Examples}
+  \begin{itemize}
+  \item{If you didn't guess already, these slides are in \LaTeX ! You can find them at \url{https://github.com/jakevossen5/acm-w-latex-talk}}
+  \item {Some other examples...}
+  \end{itemize}
+  
+\end{frame}
+
+% \begin{frame}{Formatting of Equations}
+
+
+% \vskip 1cm
+
+% \end{frame}
+
+% \begin{frame}{Faster Equation Creation (maybe after some initial costs)}
+
+
+% \end{frame}
+
+
+\begin{frame}{Things That Suck in \LaTeX}
+
+  \begin{itemize}
+    \item {The error messages are not the best, usually point to something quite a ways after what is actually wrong}
+    \item {You have to rely almost entirely on third party documentation (Overleaf)}
+    \item {Making tables can be a pain}
+    \item {Adding diagrams exactly where you want them is difficult as well}
+    \item {It can be frustrating when your English homework doesn't compile}
+  \end{itemize}
 
   % Git, text editors, etc
 \end{frame}
