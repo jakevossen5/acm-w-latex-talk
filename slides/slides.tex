@@ -1,7 +1,3 @@
-% TODO Wishlist of things to cover
-% Wikipedia as source for equations
-% Things that suck in latex
-
 
 \documentclass{beamer}
 %
@@ -29,7 +25,7 @@
 
 \title{An Introduction to \LaTeX}
 \author{Jake Vossen}
-\institute{Colorado School of Mines - acm-w}
+\institute{Colorado School of Mines - ACM-W}
 \date{2020-02-26}
 
 \begin{document}
@@ -47,6 +43,10 @@
 %\begin{frame}{Outline}
 %  \tableofcontents
 %\end{frame}
+
+\begin{frame}{A quick note on pronunciation...}
+  The ``TeX'' in \LaTeX are the capital letters tau, epsilon, and chi witch derive words like ``technology'' in English today. This makes the logical ways to pronounce it \textit{lah-teck} and \textit{lay-teck}.
+\end{frame}
 
 \section{What is \LaTeX?}
 
@@ -86,6 +86,42 @@
 \end{equation}
 
 \end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{More \LaTeX}
+  \begin{verbatim}
+    \begin{itemize}
+      \item{Point 1}
+      \item {Point 2}
+    \end{itemize}
+  \end{verbatim}\par
+    \hrulefill\par
+  
+  
+    \begin{itemize}
+      \item{Point 1}
+      \item {Point 2}
+    \end{itemize}
+  
+  \end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{More \LaTeX}
+  \begin{verbatim}
+    \begin{enumerate}
+      \item{Point 1}
+      \item {Point 2}
+    \end{enumerate}
+  \end{verbatim}\par
+    \hrulefill\par
+  
+  
+    \begin{enumerate}
+      \item{Point 1}
+      \item {Point 2}
+    \end{enumerate}
+  
+  \end{frame}
 
 \section{The Why}
 
@@ -127,12 +163,14 @@
 
 \begin{frame}{Quality of Life}
   \begin{itemize}
-    \item {Use your favorite text editor to write those long papers}
-    \item {Use git to version control and collaborate on writeups}
-    \item {More control over how your document is formatted without having drag everything to how you like it}
-    \item {A better ``default'' look instead of just bolding headings}
+    \item<1-> {Use your favorite text editor to write those long papers}
+    \item<2-> {Use git to version control and collaborate on writeups}
+    \item<3-> {More control over how your document is formatted without having drag everything to how you like it}
+    \item<4-> {A better ``default'' look instead of just bolding headings}
   \end{itemize}
 \end{frame}
+
+\section{Breaking up a \LaTeX document}
 
 \begin{frame}[fragile]
 
@@ -167,9 +205,6 @@
     \item This slide exists to remind Jake to show you the example Hello World document
   \end{itemize}
 \end{frame}
-  
-
-\section{Parts of a \LaTeX document}
 
 \begin{frame}[fragile]
   \frametitle{The Header}
@@ -216,8 +251,8 @@
 
 \begin{frame}{Examples}
   \begin{itemize}
-  \item{If you didn't guess already, these slides are in \LaTeX ! You can find them at \url{https://github.com/jakevossen5/acm-w-latex-talk}}
-  \item {Some other examples...}
+  \item<1-> {If you didn't guess already, these slides are in \LaTeX ! You can find them at \url{https://github.com/jakevossen5/acm-w-latex-talk}}
+  \item<2-> {Some other examples...}
   \end{itemize}
   
 \end{frame}
@@ -236,11 +271,11 @@
 \begin{frame}{Things That Suck in \LaTeX}
 
   \begin{itemize}
-    \item {The error messages are not the best, usually point to something quite a ways after what is actually wrong}
-    \item {You have to rely almost entirely on third party documentation (Overleaf)}
-    \item {Making tables can be a pain}
-    \item {Adding diagrams exactly where you want them is difficult as well}
-    \item {It can be frustrating when your English homework doesn't compile}
+    \item<1-> {The error messages are not the best, usually point to something quite a ways after what is actually wrong}
+    \item<2-> {You have to rely almost entirely on third party documentation (Overleaf)}
+    \item<3-> {Making tables can be a pain}
+    \item<4-> {Adding diagrams exactly where you want them is difficult as well}
+    \item<5-> {It can be frustrating when your English homework doesn't compile}
   \end{itemize}
 
   % Git, text editors, etc
@@ -260,12 +295,13 @@
 \begin{frame}{Personal Suggestions}
   \begin{enumerate}
     \item<1-> {VSCode + \LaTeX workshop for good side by side editing}
-    \item<2-> {Keep a note file somewhere with all the header items you want to have in all of your documents}
+    \item<2-> {Keep a note file somewhere with all the header items you want to have in all of your documents. Copy paste this to start your new documents}
     \item<3-> {Be willing to put some upfront cost in for long term benefit - it can be a bit of a frustrating experience to start but a rewarding one if you commit to it.}
     \item<4-> {Use git!}
   \end{enumerate}
 \end{frame}
 
+\section{Questions?}
 
 
 \end{document}
