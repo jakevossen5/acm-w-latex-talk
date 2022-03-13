@@ -21,12 +21,14 @@
 
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
+\usepackage{xspace}
 \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 
-\title{An Introduction to \LaTeX}
+\title{An Introduction to \latex}
 \author{Jake Vossen}
 \institute{Colorado School of Mines - ACM-W}
 \date{2020-02-26}
+\newcommand{\latex}{\LaTeX\xspace}
 
 \begin{document}
 \begin{frame}{Something to consider...}
@@ -46,15 +48,15 @@
 %\end{frame}
 
 \begin{frame}{A quick note on pronunciation...}
-  The ``TeX'' in \LaTeX are the capital letters tau, epsilon, and chi witch derive words like ``technology'' in English today. This makes the logical ways to pronounce it \textit{lah-teck} and \textit{lay-teck}.
+  The ``TeX'' in \latex are the capital letters tau, epsilon, and chi witch derive words like ``technology'' in English today. This makes the logical ways to pronounce it \textit{lah-teck} and \textit{lay-teck}.
 \end{frame}
 
-\section{What is \LaTeX?}
+\section{What is \latex?}
 
 \begin{frame}[fragile]
-  \frametitle{What is \LaTeX}
+  \frametitle{What is \latex}
 
-  It is \textbf{not} a ``what you see is what you get'' editor (WYSIWYG). \LaTeX converts plain text files (.tex) into (typically) PDFs
+  It is \textbf{not} a ``what you see is what you get'' editor (WYSIWYG). \latex converts plain text files (.tex) into (typically) PDFs
 
   %% text
 \begin{verbatim}
@@ -72,7 +74,7 @@
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{More \LaTeX}
+\frametitle{More \latex}
 \begin{verbatim}
 \begin{equation}
   \int_0^a x^n dx = \frac{1}{n+1}\
@@ -89,7 +91,7 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{More \LaTeX}
+  \frametitle{More \latex}
   \begin{verbatim}
     \begin{itemize}
       \item{Point 1}
@@ -107,7 +109,7 @@
   \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{More \LaTeX}
+  \frametitle{More \latex}
   \begin{verbatim}
     \begin{enumerate}
       \item{Point 1}
@@ -132,9 +134,9 @@
 
   \begin{enumerate}
     \item {Almost all journals, especially in Math, CS, and Physics
-      either prefer or mandate \LaTeX as the document submission
+      either prefer or mandate \latex as the document submission
       format}
-    \item {Discrete Math (CSCI 358) uses \LaTeX for all of your homework}
+    \item {Discrete Math (CSCI 358) uses \latex for all of your homework}
     \item {It can make your project / homework submissions look much more professional}
    \end{enumerate}
 
@@ -151,7 +153,7 @@
 
   \includegraphics[scale=.75]{word-equation.png}
 
-  \item{\LaTeX}
+  \item{\latex}
 
   \begin{equation}
   \int_0^a x^n dx = \frac{1}{n+1}\
@@ -167,7 +169,7 @@
   \begin{itemize}
     \item<1-> {Packages provide all the different citation styles}
     \item<2-> {Auto update order, style, and formatting}
-    \item<3-> {Sometimes, journals (+ arXiv) will provide \LaTeX citation entries so you don't have to type anything!}
+    \item<3-> {Sometimes, journals (+ arXiv) will provide \latex citation entries so you don't have to type anything!}
     \item<4-> {(Dagny shows example)}
   \end{itemize}
 \end{frame}
@@ -187,7 +189,7 @@
   \end{itemize}
 \end{frame}
 
-\section{Breaking up a \LaTeX document}
+\section{Breaking up a \latex document}
 
 \begin{frame}[fragile]
 
@@ -233,7 +235,7 @@
 
   \begin{itemize}
     \item{Document class - typically \texttt{article}, but you would change this if you where working on a book or thesis (or slides like these)}
-    \item {Packages - easiest way to extend \LaTeX to include more functionality (in this case, setting margins away from the default 2 inches)}
+    \item {Packages - easiest way to extend \latex to include more functionality (in this case, setting margins away from the default 2 inches)}
   \end{itemize}
 \end{frame}
 
@@ -261,30 +263,30 @@
 
   \end{verbatim}
 % TODO Add verbatim to the subsection texts
-  This is the meat of writing \LaTeX documents, using section, subsection, and subsubsection etc to structure your document, adding in equations when you need them. 
+  This is the meat of writing \latex documents, using section, subsection, and subsubsection etc to structure your document, adding in equations when you need them. 
 
 
 \end{frame}
 
 \begin{frame}{Examples}
   \begin{itemize}
-  \item<1-> {If you didn't guess already, these slides are in \LaTeX ! You can find them at \url{https://github.com/jakevossen5/acm-w-latex-talk}}
+  \item<1-> {If you didn't guess already, these slides are in \latex ! You can find them at \url{https://github.com/jakevossen5/acm-w-latex-talk}}
   \item<2-> {Some other examples...}
   \end{itemize}
 \end{frame}
 
 
-\begin{frame}{How to get Started with \LaTeX}
+\begin{frame}{How to get Started with \latex}
   In approvement order of most tech-intensive to least tech-intensive
   \begin{enumerate}
-    \item{Overleaf - The Google Docs equivelent of \LaTeX - everything is in browser}
-    \item { $\langle \text{Texpad, Texstudio, Texmaker} \rangle$ are all desktop apps designed for out of the box \LaTeX usage}
+    \item{Overleaf - The Google Docs equivelent of \latex - everything is in browser}
+    \item { $\langle \text{Texpad, Texstudio, Texmaker} \rangle$ are all desktop apps designed for out of the box \latex usage}
     \item {Using \texttt{pdflatex} (on macOS: \texttt{brew cask install mactex}) + the text editor of your choice} %TODO verb
   \end{enumerate}
 \end{frame}
 
 
-\begin{frame}{Things That Suck in \LaTeX}
+\begin{frame}{Things That Suck in \latex}
 
   \begin{itemize}
     \item<1-> {The error messages are not the best, usually point to something quite a ways after what is actually wrong}
@@ -297,20 +299,20 @@
   % Git, text editors, etc
 \end{frame}
 
-\begin{frame}{Getting Help on \LaTeX}
+\begin{frame}{Getting Help on \latex}
   Official documentation is not great, try the following places for good documentation / tutorials
 
   \begin{enumerate}
-    \item<1->{\url{overleaf.com/learn} provides a \textbf{ton} of information on getting started with \LaTeX}
+    \item<1->{\url{overleaf.com/learn} provides a \textbf{ton} of information on getting started with \latex}
     \item<2-> {\url{tex.stackexchange.com}}
-    \item<3-> {Wikipedia equations are all written in \LaTeX, if you have a specific equation or aren't sure how to do something}
+    \item<3-> {Wikipedia equations are all written in \latex, if you have a specific equation or aren't sure how to do something}
     \item<4-> {Google - you are a comp sci after all}
   \end{enumerate}
 \end{frame}
 
 \begin{frame}{Personal Suggestions}
   \begin{enumerate}
-    \item<1-> {VSCode + \LaTeX workshop for good side by side editing}
+    \item<1-> {VSCode + \latex workshop for good side by side editing}
     \item<2-> {Keep a note file somewhere with all the header items you want to have in all of your documents. Copy paste this to start your new documents}
     \item<3-> {Be willing to put some upfront cost in for long term benefit - it can be a bit of a frustrating experience to start but a rewarding one if you commit to it.}
     \item<4-> {Use git!}
