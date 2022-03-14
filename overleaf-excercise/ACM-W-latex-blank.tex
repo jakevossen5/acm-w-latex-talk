@@ -1,0 +1,115 @@
+%declare what type of document you are making
+%typically this wont change unless you're making slides or something else
+\documentclass{article}
+%latex has a weird default indent scheme
+\setlength{\parindent}{0in} %remove all paragraph indents
+
+%Next import any packages you will need
+\usepackage[margin=1in]{geometry} %fix the wack default latex margins
+\usepackage{csquotes} %quotes
+\usepackage{dirtytalk} %quotes
+\usepackage{minted} %adding code
+\usepackage[table,xcdraw]{xcolor} %for table creation
+\usepackage{graphicx} %for images
+\graphicspath{ {./images/} } %set path to look for images
+\usepackage{float} %for figure positioning
+\usepackage{natbib} %simple IEEE style citations
+%\usepackage[notes,backend=biber]{biblatex-chicago} 
+% This is a good package for MLA and chicago style. I use biblatex when a paper is very citation heavy
+\usepackage[normalem]{ulem} %strikethroughs
+\usepackage{hyperref} %urls and hyperlinks https://www.overleaf.com/learn/latex/Hyperlinks
+\hypersetup{ %hyperlink setup 
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+    }
+
+
+\begin{document}
+
+\title{Learning \LaTeX}
+\author{Mines ACM-W}
+\date{March 2022}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Basics}
+\subsection{Text Modifiers}
+Lets start practicing latex! You can find a filled-in version of this document at \url{https://github.com/jakevossen5/acm-w-latex-talk}
+
+\subsection{Quotes}
+"Quotation marks will always show up as back quotes."
+
+To get front quotes, use \`\` \\
+
+But, \say{the dirtytalk package makes inline quotes incredibly easy!} We can also use csquotes for longer quotes:
+\begin{displayquote}
+Once upon a time there was a lovely princess. But she had an enchantment upon her of a fearful sort which could only be broken by love's first kiss. She was locked away in a castle guarded by a terrible fire-breathing dragon. Many brave knights had attempted to free her from this dreadful prison, but non prevailed. She waited in the dragon's keep in the highest room of the tallest tower for her true love and true love's first kiss. (Laughs, tears out a page of the book) Like that's ever gonna happen. What a load of - (toilet flush).
+\end{displayquote}
+
+
+\section{Lists}
+%https://www.overleaf.com/learn/latex/Lists
+Bulleted list:
+
+Numbered list:
+
+
+\section{Equations}
+Summation property: \\
+
+Discrete math mumbo jumbo:\\
+
+Finally, let's steal the position-space Schrödinger equation from Wikipedia:
+%go to https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation#Preliminaries
+%click edit
+%find the equation you want and copy it
+%equations will be enclosed in <math></math> tags
+\begin{center}
+    
+\end{center}
+
+\section{Tables}
+%We do NOT recommend trying to make tables from scratch
+%this table was made using: https://www.tablesgenerator.com/
+%you may notice your table isn't where you expect
+%try adding H or h! to \begin{table}[]
+
+
+\section{Citations and Footnotes}
+There are many citation packages to choose from, here we are using Natbib. Overleaf has some very easy-to-follow guides. You can also look at the \LaTeX \hspace{} project. 
+
+%https://www.overleaf.com/learn/latex/Bibliography_management_with_natbib
+%https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex
+
+\section{Code}
+    \subsection{Small Code Fragments and Specialty Text}
+
+    Text enclosed inside \texttt{verbatim} environment 
+    is printed directly 
+    and all \LaTeX{} commands are ignored.
+    
+    \subsection{Large Code Segments}
+
+    #prints wow
+    def wow():
+        print("Wow!")
+    
+    wow()
+    
+\section{Images}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{images/}
+\caption{\textit{``Screensaver"}}
+\end{figure}
+
+\section{Conclusion}
+Thanks for coming!
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}
